@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário para Discord</title>
+    <style>
+        #image-container {
+            border: 1px solid #ccc;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h2>Enviar Dados para Discord</h2>
+    <form id="discordForm">
+        <label for="info">Cole as informações (Nome e ID Steam):</label><br>
+        <input type="text" id="info" name="info" required placeholder="Cole o Nome e ID Steam"><br><br>
+
+        <label for="rules">Escolha uma ou mais regras violadas:</label>
+        <br>
+        <select id="rules" name="rules" multiple size="6">
+            <optgroup label="Grupo 1 - Regras Gerais">
+                <option value="1.1 - Nick impronunciável, caracteres especiais.">1.1 - Nick impronunciável, caracteres especiais.</option>
+                <option value="1.2 - Proibido reproduzir músicas, sons, etc.">1.2 - Proibido reproduzir músicas, sons, etc.</option>
+                <option value="1.3 - Membros de clã não jogam em lados opostos.">1.3 - Membros de clã não jogam em lados opostos.</option>
+                <option value="1.4 - Desculpar-se por TK no allchat.">1.4 - Desculpar-se por TK no allchat.</option>
+            </optgroup>
+            <optgroup label="Grupo 2 - Regras de Assets">
+                <option value="2.1 - Uso de assets conforme esquadrão.">2.1 - Uso de assets conforme esquadrão.</option>
+                <option value="2.2 - Proibido criar esquadrão de assets não especificados.">2.2 - Proibido criar esquadrão de assets não especificados.</option>
+                <option value="2.3 - Proibido roubar veículos.">2.3 - Proibido roubar veículos.</option>
+                <option value="2.4 - CMD Squad não pode usar assets nomeados.">2.4 - CMD Squad não pode usar assets nomeados.</option>
+            </optgroup>
+            <optgroup label="Grupo 3 - Regras de Comunicação">
+                <option value="3.1 - Proibido trancar esquadrão com menos de 4.">3.1 - Proibido trancar esquadrão com menos de 4.</option>
+                <option value="3.2 - Líder deve usar kit líder.">3.2 - Líder deve usar kit líder.</option>
+                <option value="3.3 - Proibido criar esquadrão sem intenção de liderar.">3.3 - Proibido criar esquadrão sem intenção de liderar.</option>
+                <option value="3.4 - Líder deve ser comunicativo e falar em português.">3.4 - Líder deve ser comunicativo e falar em português.</option>
+            </optgroup>
+            <optgroup label="Grupo 4 - Regras do Chat">
+                <option value="4.1 - Uso indevido do chat (discussão, spam, etc.).">4.1 - Uso indevido do chat (discussão, spam, etc.).</option>
+                <option value="4.2 - Racismo e preconceito.">4.2 - Racismo e preconceito.</option>
+                <option value="4.3 - Cheat ou abuso de glitchs/bugs.">4.3 - Cheat ou abuso de glitchs/bugs.</option>
+                <option value="4.4 - Desrespeito aos administradores.">4.4 - Desrespeito aos administradores.</option>
+            </optgroup>
+        </select><br><br>
+
+        <label for="image">Cole a captura de tela aqui:</label><br>
+        <div id="image-container"></div><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
